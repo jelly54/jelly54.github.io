@@ -132,7 +132,7 @@
 
 
 
-  <meta name="keywords" content="原理,框架,SpringBoot,">
+  <meta name="keywords" content="原理,框架,使用手册,SpringBoot,">
 
 
 
@@ -146,7 +146,7 @@
 
 
 <meta name="description" content="Spring Boot 入门1、Spring Boot 简介 简化Spring应用开发的一个框架； 整个Spring技术栈的一个大整合； J2EE开发的一站式解决方案；">
-<meta name="keywords" content="原理,框架,SpringBoot">
+<meta name="keywords" content="原理,框架,使用手册,SpringBoot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot入门到进阶（含源码）">
 <meta property="og:url" content="https://jelly54.github.io/springb-start2advanced/index.html">
@@ -183,7 +183,7 @@
 <meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/094EC60D648743398944455762135E09?method=download&shareKey=e792af8c3d1231346e30cb018dfe3aa0">
 <meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/E9E48AB0719341839D3D25898FE4C24E?method=download&shareKey=e792af8c3d1231346e30cb018dfe3aa0">
 <meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/8CA85A2775424B7BB683E839EDDF7228?method=download&shareKey=e792af8c3d1231346e30cb018dfe3aa0">
-<meta property="og:updated_time" content="2020-08-27T11:05:52.294Z">
+<meta property="og:updated_time" content="2020-08-28T06:01:32.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot入门到进阶（含源码）">
 <meta name="twitter:description" content="Spring Boot 入门1、Spring Boot 简介 简化Spring应用开发的一个框架； 整个Spring技术栈的一个大整合； J2EE开发的一站式解决方案；">
@@ -773,7 +773,8 @@
 <ul>
 <li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SpringFactoriesLoader.loadFactoryNames()</span><br><span class="line">扫描所有jar包类路径下  META-INF/spring.factories</span><br><span class="line">把扫描到的这些文件的内容包装成properties对象</span><br><span class="line">从properties中获取到EnableAutoConfiguration.class类（类名）对应的值，然后把他们添加在容器中</span><br></pre></td></tr></table></figure>
 
-<p>​</p>
+
+
 </li>
 </ul>
 </li>
@@ -1065,8 +1066,9 @@
 <li><p>Static <code>index.html</code> support. 静态首页访问</p>
 </li>
 <li><p>Custom <code>Favicon</code> support (see below).  favicon.ico</p>
-<p>​</p>
 </li>
+</ul>
+<ul>
 <li><p>自动注册了 of <code>Converter</code>, <code>GenericConverter</code>, <code>Formatter</code> beans.</p>
 <ul>
 <li>Converter：转换器；  public String hello(User user)：类型转换使用Converter</li>
@@ -1084,10 +1086,11 @@
 </li>
 <li><p><code>HttpMessageConverters</code> 是从容器中确定；获取所有的HttpMessageConverter；</p>
 <p>==自己给容器中添加HttpMessageConverter，只需要将自己的组件注册容器中（@Bean,@Component）==</p>
-<p>​</p>
 </li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><p>Automatic registration of <code>MessageCodesResolver</code> (see below).定义错误代码生成规则</p>
 </li>
 <li><p>Automatic use of a <code>ConfigurableWebBindingInitializer</code> bean (see below).</p>
@@ -1280,7 +1283,7 @@
 <p><img src="https://note.youdao.com/yws/api/personal/file/2C37DF44CBCC42988580E6F4D9F9257D?method=download&shareKey=e792af8c3d1231346e30cb018dfe3aa0" alt></p>
 <p>​        2）、如果是其他客户端，默认响应一个json数据</p>
 <p><img src="https://note.youdao.com/yws/api/personal/file/4C7397648C604045B1EC9E1750DD6B54?method=download&shareKey=e792af8c3d1231346e30cb018dfe3aa0" alt></p>
-<p>​<img src="https://note.youdao.com/yws/api/personal/file/E02B4C13291A4E5395314659B7BA484B?method=download&shareKey=e792af8c3d1231346e30cb018dfe3aa0" alt></p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/E02B4C13291A4E5395314659B7BA484B?method=download&shareKey=e792af8c3d1231346e30cb018dfe3aa0" alt></p>
 <p>原理：</p>
 <p>​    可以参照ErrorMvcAutoConfiguration；错误处理的自动配置；</p>
 <pre><code>给容器中添加了以下组件</code></pre><p>​    1、DefaultErrorAttributes：</p>
@@ -1658,7 +1661,7 @@
   <p><span>本文标题:</span><a href="/springb-start2advanced/">SpringBoot入门到进阶（含源码）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Big Jelly 的个人博客">Big Jelly</a></p>
   <p><span>发布时间:</span>2019年10月01日 - 20:25</p>
-  <p><span>最后更新:</span>2020年08月27日 - 19:05</p>
+  <p><span>最后更新:</span>2020年08月28日 - 14:01</p>
   <p><span>原始链接:</span><a href="/springb-start2advanced/" title="SpringBoot入门到进阶（含源码）">https://jelly54.github.io/springb-start2advanced/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://jelly54.github.io/springb-start2advanced/" aria-label="复制成功！"></i></span>
   </p>
@@ -1722,6 +1725,8 @@
             <a href="/tags/原理/" rel="tag"><i class="fa fa-tag"></i> 原理</a>
           
             <a href="/tags/框架/" rel="tag"><i class="fa fa-tag"></i> 框架</a>
+          
+            <a href="/tags/使用手册/" rel="tag"><i class="fa fa-tag"></i> 使用手册</a>
           
             <a href="/tags/SpringBoot/" rel="tag"><i class="fa fa-tag"></i> SpringBoot</a>
           
@@ -1836,7 +1841,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1847,7 +1852,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1858,7 +1863,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1986,7 +1991,7 @@
 		
 			<span class="post-meta-item-text">Site words total count&#58;</span>
 		
-		<span title="Site words total count">143.1k</span>
+		<span title="Site words total count">144.7k</span>
 	
   
 	

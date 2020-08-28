@@ -1,5 +1,6 @@
 https://jelly54.github.io/java-lock-upgrade/
 https://jelly54.github.io/net-break-transport/
+https://jelly54.github.io/graduation-project/
 https://jelly54.github.io/cache-database-cons/
 https://jelly54.github.io/cache-why-use/
 https://jelly54.github.io/mysql-master-slave/
@@ -7,4 +8,3 @@ https://jelly54.github.io/mysql-lock/
 https://jelly54.github.io/mysql-global-log/
 https://jelly54.github.io/mysql-show-profile/
 https://jelly54.github.io/mysql-bulk/
-https://jelly54.github.io/mysql-slow-query/
