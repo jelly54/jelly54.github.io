@@ -312,8 +312,8 @@
         <category>Mysql</category>
       </categories>
       <tags>
-        <tag>mysql</tag>
         <tag>使用手册</tag>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -341,8 +341,8 @@
         <tag>原理</tag>
         <tag>基础数据类型</tag>
         <tag>主从架构</tag>
-        <tag>redis</tag>
         <tag>读书笔记</tag>
+        <tag>redis</tag>
       </tags>
   </entry>
   <entry>
@@ -677,8 +677,8 @@
       </categories>
       <tags>
         <tag>TCP/IP</tag>
-        <tag>UDP</tag>
         <tag>网络</tag>
+        <tag>UDP</tag>
       </tags>
   </entry>
   <entry>
