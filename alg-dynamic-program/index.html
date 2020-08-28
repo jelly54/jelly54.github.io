@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="true">
+
+<script data-ad-client="ca-pub-3331353808689126" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="true">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="算法,动态规划,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="爱吃jelly的Jelly" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="本文将常见的动态规划做了整合，根据不同的题目总结其特点，根据各自特点找出通用的解题思路。尚未完全总结完成。">
+<meta name="keywords" content="算法,动态规划">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动态规划算法题">
+<meta property="og:url" content="https://jelly54.github.io/alg-dynamic-program/index.html">
+<meta property="og:site_name" content="爱吃jelly的Jelly">
+<meta property="og:description" content="本文将常见的动态规划做了整合，根据不同的题目总结其特点，根据各自特点找出通用的解题思路。尚未完全总结完成。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-08-28T06:28:53.792Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="动态规划算法题">
+<meta name="twitter:description" content="本文将常见的动态规划做了整合，根据不同的题目总结其特点，根据各自特点找出通用的解题思路。尚未完全总结完成。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jelly54.github.io/alg-dynamic-program/">
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="t21ZdXzSqf">
+
+
+
+<meta name="google-site-verification" content="VmrkZiYJtPrIIH8zlY82aG2_l1Ykrp3JZ3HQbMt0qCo">
+
+  <title>动态规划算法题 | 爱吃jelly的Jelly</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+    <a href="https://github.com/jelly54" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">爱吃jelly的Jelly</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">就揪啾  就是 Jelly</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于作者
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jelly54.github.io/alg-dynamic-program/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Big Jelly">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱吃jelly的Jelly">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">动态规划算法题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-13T23:26:20+08:00">
+                2020-03-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  6.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  27
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文将常见的动态规划做了整合，根据不同的题目总结其特点，根据各自特点找出通用的解题思路。尚未完全总结完成。</p>
+<a id="more"></a>
+
+<h1 id="题目特点"><a href="#题目特点" class="headerlink" title="题目特点"></a>题目特点</h1><h2 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h2><ul>
+<li>有多少种方式走到右下角</li>
+<li>有多少种方法选出K个数使得和是Sum</li>
+</ul>
+<h2 id="求最大值最小值"><a href="#求最大值最小值" class="headerlink" title="求最大值最小值"></a>求最大值最小值</h2><ul>
+<li>从左上角走到右下角路径的最大数字和</li>
+<li>最长上升子序列</li>
+</ul>
+<h2 id="求存在性"><a href="#求存在性" class="headerlink" title="求存在性"></a>求存在性</h2><ul>
+<li>取石子游戏，先手是否必胜</li>
+<li>能不能选出K个数使得和是Sum</li>
+</ul>
+<hr>
+<h1 id="归类"><a href="#归类" class="headerlink" title="归类"></a>归类</h1><h2 id="序列型动态规划"><a href="#序列型动态规划" class="headerlink" title="序列型动态规划"></a>序列型动态规划</h2><ul>
+<li>关键字：前i个 / 最小 / 方式数 / 可行性</li>
+<li>对于按序列且有状态的问题，采用 二维dp，存下序列+状态</li>
+</ul>
+<h2 id="坐标型动态规划"><a href="#坐标型动态规划" class="headerlink" title="坐标型动态规划"></a>坐标型动态规划</h2><ul>
+<li>最简单的动态规划类型</li>
+<li>给定一个序列或网络</li>
+<li>需要找到序列中某个/些子序列或网络中的某条路径<ul>
+<li>某种性质最大/最小</li>
+<li>计数</li>
+<li>存在性</li>
+</ul>
+</li>
+<li>动态规划方程dp1]中的下标i表示以ai为结尾的满足条件的子序列的性质，dp[i][j]中的下标i, j表示以格子(i, j)为结尾的满足条件的路径的性质<ul>
+<li>最大值/最小值</li>
+<li>个数.</li>
+<li>是否存在</li>
+</ul>
+</li>
+<li>坐标型动态规划的初始条件dp[0]就是指以a0为结尾的子序列的性质</li>
+</ul>
+<hr>
+<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><h2 id="确定状态"><a href="#确定状态" class="headerlink" title="确定状态"></a>确定状态</h2><ul>
+<li>研究最优策略的最后一步</li>
+<li>化为子问题</li>
+</ul>
+<p>简单的说，动态规划的时候需要开一个数组，数组的每个元素f[i]或者f[i][j]代表什么。</p>
+<h2 id="转移方程"><a href="#转移方程" class="headerlink" title="转移方程"></a>转移方程</h2><p>根据子问题定义直接得到</p>
+<p>依据这两个意识，定义转移方程</p>
+<h2 id="初始条件和边界条件"><a href="#初始条件和边界条件" class="headerlink" title="初始条件和边界条件"></a>初始条件和边界条件</h2><p>在给定的状态中，最开始的值是可以确定的，先将Base值填入动态规划的数组中。</p>
+<p>寻找边界值，如数组最后一个等。数组越界、边界值计算。</p>
+<h2 id="调整计算顺序"><a href="#调整计算顺序" class="headerlink" title="调整计算顺序"></a>调整计算顺序</h2><p>检查是否存在重复计算，调整计算顺序或者建立缓存消除重复计算。</p>
+<hr>
+<h1 id="例题讲解"><a href="#例题讲解" class="headerlink" title="例题讲解"></a>例题讲解</h1><h2 id="零钱兑换-最值型"><a href="#零钱兑换-最值型" class="headerlink" title="零钱兑换(最值型)"></a>零钱兑换(最值型)</h2><p>给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。</p>
+<p>示例 1:</p>
+<blockquote>
+<p>输入: coins = [1, 2, 5], amount = 11<br>输出: 3 </p>
+<p>解释: 11 = 5 + 5 + 1</p>
+</blockquote>
+<p>示例 2:</p>
+<blockquote>
+<p>输入: coins = [2], amount = 3<br>输出: -1</p>
+</blockquote>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>求最大最小值动态规划</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">coinChange</span><span class="params">(<span class="keyword">int</span>[] coins, <span class="keyword">int</span> amount)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 确定状态 dp[i] 为 能组合成面额为 i 的硬币最少数量</span></span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[amount + <span class="number">1</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 初始条件</span></span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 转移方程 f(n) = Math.min(f(n - f[1]) + 1,...,f(n - coins[n]) + 1)</span></span><br><span class="line">    <span class="comment">// f(n)等于所有coins中最小的和，即子问题最优时。最后应计算到amount这个值</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= amount; i++) &#123;</span><br><span class="line">        dp[i] = Integer.MAX_VALUE;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> coin : coins) &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 边界条件，面额amount 应大于等于硬币coin大小</span></span><br><span class="line">            <span class="keyword">if</span> (i &gt;= coin &amp;&amp; dp[i - coin] != Integer.MAX_VALUE) &#123;</span><br><span class="line">                dp[i] = Math.min(dp[i - coin] + <span class="number">1</span>, dp[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 边界条件</span></span><br><span class="line">    <span class="keyword">if</span> (dp[amount] == Integer.MAX_VALUE) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[amount];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="不同路径-计数型"><a href="#不同路径-计数型" class="headerlink" title="不同路径(计数型)"></a>不同路径(计数型)</h2><p>一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。</p>
+<p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。</p>
+<p>问总共有多少条不同的路径？</p>
+<p>示例 1:</p>
+<blockquote>
+<p>输入: m = 3, n = 2<br>输出: 3</p>
+<p>解释:<br>从左上角开始，总共有 3 条路径可以到达右下角。</p>
+<ol>
+<li>向右 -&gt; 向右 -&gt; 向下</li>
+<li>向右 -&gt; 向下 -&gt; 向右</li>
+<li>向下 -&gt; 向右 -&gt; 向右</li>
+</ol>
+</blockquote>
+<p>示例 2:</p>
+<blockquote>
+<p>输入: m = 7, n = 3<br>输出: 28</p>
+</blockquote>
+<blockquote>
+<p>提示：<br>1 &lt;= m, n &lt;= 100 题目数据保证答案小于等于 2 * 10 ^ 9</p>
+</blockquote>
+<h3 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h3><p>计数型动态规划</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">uniquePaths</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 确定状态。dp[i][j] 为 在i行j列处到终点有多少路径</span></span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[m][n];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="comment">// 初始条件, 走在边上时</span></span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span> || j == <span class="number">0</span>) &#123;</span><br><span class="line">                dp[i][j] = <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 转移方程, 每个位置都依赖它上边的位置和左边的位置</span></span><br><span class="line">                dp[i][j] = dp[i - <span class="number">1</span>][j] + dp[i][j - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 边界处理</span></span><br><span class="line">    <span class="keyword">return</span> dp[m - <span class="number">1</span>][n - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="跳跃游戏-存在型"><a href="#跳跃游戏-存在型" class="headerlink" title="跳跃游戏(存在型)"></a>跳跃游戏(存在型)</h2><p>有n块石头分别在x轴的0，1，…，n-1 位置</p>
+<p>一只青蛙在石头0，想跳到石头n-1</p>
+<p>如果青蛙在第i块石头上，他最多可以向右跳跃距离ai</p>
+<p>问青蛙能否跳到石头n-1</p>
+<p>例子：</p>
+<blockquote>
+<p>输入：a=[2,3,1,1,4]<br>输出：true  </p>
+<p>输入：a=[3,2,1,0,4]<br>输出：false</p>
+</blockquote>
+<h3 id="分析-2"><a href="#分析-2" class="headerlink" title="分析"></a>分析</h3><p>存在性动态规划</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 最后一步：如果青蛙能跳到最后一块石头n-1 ，分析它最后一跳</span></span><br><span class="line"><span class="comment">   *</span></span><br><span class="line"><span class="comment">   * 最后一跳是从石头i跳过来的，i &lt; n-1</span></span><br><span class="line"><span class="comment">   * 满足：</span></span><br><span class="line"><span class="comment">   * 青蛙可以跳到石头 i （子问题只是数量级小了，方式通父问题）</span></span><br><span class="line"><span class="comment">   * 最后一步不超过跳跃的最大距离 n-1 - i &lt; ai</span></span><br><span class="line"><span class="comment">   *</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">canJump</span><span class="params">(<span class="keyword">int</span>[] stones)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">int</span> len = stones.length;</span><br><span class="line">      <span class="comment">// 确定状态：dp[i] 表示青蛙能不能跳过石头 i</span></span><br><span class="line">      <span class="keyword">boolean</span>[] dp = <span class="keyword">new</span> <span class="keyword">boolean</span>[len];</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 初始条件：刚开始就在石头上。</span></span><br><span class="line">      dp[<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 转移方程：dp[i] = OR（0&lt;=j&lt;i）(dp[j] AND j + stones[j] &gt;= i)</span></span><br><span class="line">      <span class="comment">// 能否跳到石头i = 穷举青蛙能否跳到上一个跳到的石头j(即能否跳到石头j 并且 最后一步的距离符合规定)</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">          dp[i] = <span class="keyword">false</span>;</span><br><span class="line">          </span><br><span class="line">          <span class="comment">// 上一跳的石头 j</span></span><br><span class="line">          <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">              <span class="keyword">if</span> (dp[j] &amp;&amp; j + stones[j] &gt;= i) &#123;</span><br><span class="line">                  dp[i] = <span class="keyword">true</span>;</span><br><span class="line">                  <span class="keyword">break</span>;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> dp[len - <span class="number">1</span>];</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="最大相乘子序列-最值型"><a href="#最大相乘子序列-最值型" class="headerlink" title="最大相乘子序列(最值型)"></a>最大相乘子序列(最值型)</h2><p>给定a[0],…,a[n-1]，找到最长的连续子序列i，i+1，i+2，…，j，使得 a[i] * a[i+1] * … * a[j]最大</p>
+<p>例子：</p>
+<blockquote>
+<p>输入：[2, 3, -2, 4]<br>输出：6(子序列 2，3:  2 * 3 = 6)</p>
+</blockquote>
+<h3 id="分析-3"><a href="#分析-3" class="headerlink" title="分析"></a>分析</h3><p>最值型动态规划</p>
+<ol>
+<li>最后一步：对于最优的策略(乘积最大)，一定有最后一个元素a[j]</li>
+<li>第一种情况：最优策略的序列就是{a[j]}，答案是a[j]</li>
+<li>第二种情况：连续子序列长度大于1，那么最优策略中a[j]前一个元素肯定是a[j-1]</li>
+<li>但是如果a[j]是正数，我们希望以a[j-1]结尾的连续子序列乘积最大；如果a[j]是负数，我们希望以a[j-1]结尾的连续子序列乘积最小。</li>
+</ol>
+<p><strong>子问题</strong></p>
+<ol>
+<li>可以同时求以a[j]结尾的连续子序列的最大乘积和以a[j]结尾的连续子序列的最小乘积</li>
+<li>两种情况都需要求以a[j-1]结尾的乘积最大/小连续子序列。</li>
+</ol>
+<p><strong>转移方程</strong></p>
+<ol>
+<li>设f[j] 为以a[j]结尾的连续子序列的最大乘积，设g[j]为以a[j]结尾的连续子序列的最小乘积。</li>
+<li>f[j] = max{a[j], max{a[j] * f[j-1], a[j] * g[j-1]} | j &gt; 0} 以a[j]结尾的连续子序列的最大乘积，包含两种情况，①子序列就a[j]本身 ②以a[j-1]结尾的子序列的最大/小乘积 再乘上a[j]。</li>
+<li>g[j] = min{a[j], min{a[j] * f[j-1], a[j] * g[j-1]} | j &gt; 0} </li>
+</ol>
+<p><strong>初始条件</strong></p>
+<ol>
+<li>空</li>
+</ol>
+<p><strong>边界问题</strong></p>
+<ol>
+<li>情况②的时候需满足 a[j] 前边至少还有一个元素</li>
+</ol>
+<p><strong>计算顺序</strong></p>
+<ol>
+<li>计算f[0],g[0],f[1],g[1],….f[n-1],g[n-1]</li>
+<li>最终答案是max{f[0],f[1],…,f[n-1]}</li>
+<li>算法时间复杂度O(n)</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProduct</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] dp_max = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] dp_min = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">if</span>(nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> max = Integer.MIN_VALUE;</span><br><span class="line">    <span class="comment">// 由于存在负数，所以需要维护两个数组</span></span><br><span class="line">    <span class="comment">// dp_max[i] 指的是以第 i 个数结尾的 乘积最大 的连续子序列</span></span><br><span class="line">    <span class="comment">// dp_min[i] 指的是以第 i 个数结尾的 乘积最小 的连续子序列</span></span><br><span class="line">    dp_max[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    dp_min[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= nums.length;i++)&#123;</span><br><span class="line">        <span class="comment">// 如果数组的数是负数，那么会导致 max 变成 min，min 变成 max</span></span><br><span class="line">        <span class="comment">// 故需要交换dp </span></span><br><span class="line">        <span class="keyword">if</span>(nums[i-<span class="number">1</span>] &lt; <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> temp = dp_min[i-<span class="number">1</span>];</span><br><span class="line">            dp_min[i-<span class="number">1</span>] = dp_max[i-<span class="number">1</span>];</span><br><span class="line">            dp_max[i-<span class="number">1</span>] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        dp_min[i] = Math.min(nums[i-<span class="number">1</span>],dp_min[i-<span class="number">1</span>]*nums[i-<span class="number">1</span>]);</span><br><span class="line">        dp_max[i] = Math.max(nums[i-<span class="number">1</span>],dp_max[i-<span class="number">1</span>]*nums[i-<span class="number">1</span>]);</span><br><span class="line">        max = Math.max(max,dp_max[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>双指针</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProduct</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max = Integer.MIN_VALUE, imax = <span class="number">1</span>, imin = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[i] &lt; <span class="number">0</span>)&#123; </span><br><span class="line">          <span class="keyword">int</span> tmp = imax;</span><br><span class="line">          imax = imin;</span><br><span class="line">          imin = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        imax = Math.max(imax*nums[i], nums[i]);</span><br><span class="line">        imin = Math.min(imin*nums[i], nums[i]);</span><br><span class="line">        </span><br><span class="line">        max = Math.max(max, imax);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="不同路径Ⅱ-坐标型"><a href="#不同路径Ⅱ-坐标型" class="headerlink" title="不同路径Ⅱ (坐标型)"></a>不同路径Ⅱ (坐标型)</h2><p>一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。</p>
+<p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。</p>
+<p>现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？</p>
+<p>网格中的障碍物和空位置分别用 1 和 0 来表示。</p>
+<p>说明：m 和 n 的值均不超过 100。</p>
+<p>示例 1:</p>
+<blockquote>
+<p>输入:<br>[<br>[0,0,0],<br>[0,1,0],<br>[0,0,0]<br>]  </p>
+</blockquote>
+<blockquote>
+<p>输出: 2<br>解释:<br>3x3 网格的正中间有一个障碍物。<br>从左上角到右下角一共有 2 条不同的路径：  </p>
+<ol>
+<li>向右 -&gt; 向右 -&gt; 向下 -&gt; 向下</li>
+<li>向下 -&gt; 向下 -&gt; 向右 -&gt; 向右</li>
+</ol>
+</blockquote>
+<h3 id="分析-4"><a href="#分析-4" class="headerlink" title="分析"></a>分析</h3><p>坐标型动态规划</p>
+<p>此题和上边的不同路径很相似，只是网格中有障碍。</p>
+<ul>
+<li>最后一步一定是从左边(i, j-1)或上边 (i-1, j)过来。</li>
+<li>状态dp[i][j]表示从左上角有多少种方式走到格子[i][j]</li>
+<li>坐标型动态规划，数组下标[i][j]即坐标(i, j)</li>
+</ul>
+<p><strong>子问题</strong></p>
+<p>子问题只是在数量级上减小了，计算步骤不变。</p>
+<p><strong>转移方程</strong></p>
+<p>dp[i][j] = dp[i-1][j] + dp[i][j-1]</p>
+<p>机器人走到(i,j)有多少种方式 = 机器人走到(i-1, j)有多少种方式 + 机器人走到(i, j-1)有多少种方式</p>
+<p><strong>初始条件</strong></p>
+<ul>
+<li>如果左上角(0,0)或右下角(m-1， n-1)有障碍，直接输出 0</li>
+<li>如果(i,j)有障碍，dp[i][j]=0，表示机器人不能到达此格</li>
+<li>dp[0][0] = 1</li>
+</ul>
+<p><strong>边界问题</strong></p>
+<ul>
+<li>dp[i][j] = 0 , 如果(i,j)有障碍</li>
+<li>dp[i][j] = 1 , i=0 且 j=0</li>
+<li>dp[i][j] = dp[i-1][j] , 如果j=1，即第一列</li>
+<li>dp[i][j] = dp[i][j-1] , 如果i=1，即第一行</li>
+<li>dp[i][j] = dp[i-1][j] + dp[i][j-1] , 其他</li>
+</ul>
+<p><strong>计算顺序</strong></p>
+<p>dp[0][0]，dp[0][1]…</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(<span class="keyword">int</span>[][] obstacleGrid)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 边界条件</span></span><br><span class="line">    <span class="keyword">int</span> r = obstacleGrid.length;</span><br><span class="line">    <span class="keyword">if</span> (r == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> c = obstacleGrid[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">if</span> (c == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 确定状态</span></span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[r][c];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; r; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; c; j++) &#123;</span><br><span class="line">            <span class="comment">//obstacle 遇到障碍</span></span><br><span class="line">            <span class="keyword">if</span> (obstacleGrid[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">                dp[i][j] = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//top-left (0,0)不是障碍 初始化为 1</span></span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span> &amp;&amp; j == <span class="number">0</span>) &#123;</span><br><span class="line">                dp[i][j] = <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// left or up 非第一行 或 非第一列</span></span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                dp[i][j] += dp[i - <span class="number">1</span>][j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (j &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                dp[i][j] += dp[i][j - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[r - <span class="number">1</span>][c - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="粉刷房子-序列型"><a href="#粉刷房子-序列型" class="headerlink" title="粉刷房子(序列型)"></a>粉刷房子(序列型)</h2><p>题意:<br>有一排N栋房子，每栋房子要漆成3种颜色中的一种:红、蓝、绿</p>
+<ul>
+<li>任何两栋相邻的房子不能漆成同样的颜色</li>
+<li>第i栋房子染成红色、蓝色、绿色的花费分别是cost[i][0], cost[][1], cost[i][2]</li>
+<li>问最少需要花多少钱油漆这些房子</li>
+</ul>
+<p>例子:</p>
+<blockquote>
+<p>输入:<br>N=3<br>Cost = [[14,2,11],[11,14,5],[14,3,10]]</p>
+</blockquote>
+<blockquote>
+<p>输出:<br>10<br>(第0栋房子蓝色，第1栋房子绿色，第2栋房子蓝色，2+5+3=10) </p>
+</blockquote>
+<h3 id="分析-5"><a href="#分析-5" class="headerlink" title="分析"></a>分析</h3><p>序列型动态规划</p>
+<ul>
+<li>最优策略是花费最小的策略</li>
+<li>最后一步:最优策略中房子N-1-定染成了红、蓝、绿中的一-种。</li>
+<li>但是相邻两栋房子不能漆成一种颜色好复杂。</li>
+<li>所以如果最优策略中房子N-1是红色，房子N-2只能是蓝色或绿色</li>
+<li>所以如果最优策略中房子N-1是蓝色，房子N-2只能是红色或绿色</li>
+<li>所以如果最优策略中房子N-1是绿色，房子N-2只能是红色或蓝色</li>
+</ul>
+<p><strong>子问题</strong></p>
+<ul>
+<li>根据套路，也需要记录油漆前N-1栋房子的最小花费</li>
+<li>但是，前N-1 栋房子的最小花费的最优策略中，不知道房子N-2是什么颜色，所以有可能和房子N-1撞色</li>
+</ul>
+<p><strong>不知道房子N-2是什么颜色，就把它记录下来</strong>。</p>
+<ul>
+<li>求油漆前N栋房子并且房子N-1是红色、蓝色、绿色的最小花费</li>
+<li>需要知道油漆前N-1栋房子并且房子N-2是红色、蓝色、绿色的最小花费</li>
+</ul>
+<p>状态:</p>
+<p>设油漆前栋房子并且房子i-1是红色、蓝色、绿色的最小花费分别dp[i][0], dp[i][1], dp[i][2]</p>
+<p><strong>转移方程</strong></p>
+<ol>
+<li>房子i是红色，房子i-1为蓝色、绿色</li>
+</ol>
+<p>dp[i][0] = min{[i-1][1] + cost[i-1][0], f[-1][2] + cost[i-1][0]}</p>
+<ol start="2">
+<li>房子i是蓝色，房子i-1为红色、绿色</li>
+</ol>
+<p>dp[i][1] = min{[i-1][0] + cost[i-1][1], f[-1][2] + cost[i-1][1]}</p>
+<ol start="3">
+<li>房子i是绿色，房子i-1为红色、蓝色</li>
+</ol>
+<p>dp[i][2] = min{[i-1][0] + cost[i-1][2], f[-1][1] + cost[i-1][2]}</p>
+<p><strong>初始条件</strong></p>
+<ol>
+<li>不油漆任何房子的花费</li>
+</ol>
+<p>dp[0][0] = dp[0][1] = dp[0][2] = 0</p>
+<p><strong>边界条件</strong></p>
+<ol>
+<li>无</li>
+</ol>
+<p><strong>计算顺序</strong></p>
+<ol>
+<li>初始化 dp[0][0], dp[0][1], dp[0][2]</li>
+<li>计算 dp[1][0], dp[1][1], dp[1][2]</li>
+<li>…</li>
+<li>dp[n][0], dp[n][1], dp[n][2]</li>
+<li>答案是 min{dp[n][0], dp[n][1], dp[n][2]}。时间复杂度O(N)，空间复杂度O(N)</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minCost</span><span class="params">(<span class="keyword">int</span>[][] houses)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = houses.length;</span><br><span class="line">    <span class="keyword">if</span> (n==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//序列型 DP</span></span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>][<span class="number">3</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 初始化</span></span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>] = dp[<span class="number">0</span>][<span class="number">1</span>] = dp[<span class="number">0</span>][<span class="number">2</span>] = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 每一个房子</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)&#123;</span><br><span class="line">        <span class="comment">// 房子颜色</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;<span class="number">3</span>; j++)&#123;</span><br><span class="line">            dp[i][j] = Integer.MAX_VALUE;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;<span class="number">3</span>; k++)&#123;</span><br><span class="line">                <span class="keyword">if</span> (j != k)&#123;</span><br><span class="line">                    <span class="comment">// 当前房子花费最小的配色方案</span></span><br><span class="line">                    dp[i][j] = Math.min(dp[i][j], dp[i-<span class="number">1</span>][k] + houses[i-<span class="number">1</span>][j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Math.min(dp[n][<span class="number">0</span>], Math.min(dp[n][<span class="number">1</span>], dp[n][<span class="number">2</span>]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="解码方法-划分型"><a href="#解码方法-划分型" class="headerlink" title="解码方法(划分型)"></a>解码方法(划分型)</h2><p>一条包含字母 A-Z 的消息通过以下方式进行了编码：</p>
+<p>‘A’ -&gt; 1<br>‘B’ -&gt; 2<br>…<br>‘Z’ -&gt; 26<br>给定一个只包含数字的非空字符串，请计算解码方法的总数。</p>
+<p>示例 1:</p>
+<blockquote>
+<p>输入: “12”<br>输出: 2<br>解释: 它可以解码为 “AB”（1 2）或者 “L”（12）。  </p>
+</blockquote>
+<p>示例 2:</p>
+<blockquote>
+<p>输入: “226”<br>输出: 3<br>解释: 它可以解码为 “BZ” (2 26), “VF” (22 6), 或者 “BBF” (2 2 6) 。</p>
+</blockquote>
+<h3 id="分析-6"><a href="#分析-6" class="headerlink" title="分析"></a>分析</h3><ul>
+<li>解密数字串即划分成若干段数字，每段数字对应- 一个字母.</li>
+<li>最后一步(最后一段) : 对应一个字母 A, B, …或Z</li>
+<li>这个字母加密时变成1, 2, …或26</li>
+</ul>
+<p>最后一个字母加密成一个数字或两个数字</p>
+<p>设数字串s前i个数字解密成字母串有dp[i]种方式</p>
+<p><strong>子问题</strong></p>
+<ul>
+<li>设数字串长度为N</li>
+<li>求数字串前N个字符的解密方式数</li>
+<li>需要知道数字串前N-1和N-2个字符的解密方式数</li>
+</ul>
+<p><strong>转移方程</strong></p>
+<p>dp[j] = dp[i-1]| S[i-1]对应-一个字母+ dp[i-2]| S[i-2]S[i-1]对应一个字母</p>
+<p>数字串S前i个数字解密成字母串的方式数 = 数字串S前i-1个数字解密成字母串的方式数 + 数字串S前i-2个数字解密成字母串的方式数</p>
+<p><strong>初始条件</strong></p>
+<p>dp[0] = 1, 即空串有一种方式解密</p>
+<p><strong>边界问题</strong></p>
+<p>如果i=1，只看最后一个数字</p>
+<p><strong>计算顺序</strong></p>
+<ul>
+<li>dp[0],dp[1],…dp[n]</li>
+<li>答案是 dp[n]</li>
+<li>时间复杂度O(N), 空间复杂度O(N)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">numDecodings</span><span class="params">(String ss)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span>[] s = ss.toCharArray();</span><br><span class="line">    <span class="keyword">int</span> n = s.length;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 确定状态，dp[i] 为前i个数字解密成字母有多少种方式</span></span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>];</span><br><span class="line">    <span class="comment">// 初始条件</span></span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        dp[i] = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 字符串至少有一个数字</span></span><br><span class="line">        <span class="keyword">int</span> t = s[i - <span class="number">1</span>] - <span class="string">'0'</span>;</span><br><span class="line">        <span class="keyword">if</span> (t &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            dp[i] += dp[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 字符串中有两个数字时</span></span><br><span class="line">        <span class="keyword">if</span> (i &gt; <span class="number">1</span>) &#123;</span><br><span class="line">            t = (s[i - <span class="number">2</span>] - <span class="string">'0'</span>) * <span class="number">10</span> + (s[i - <span class="number">1</span>] - <span class="string">'0'</span>);</span><br><span class="line">            <span class="keyword">if</span> (t &gt;= <span class="number">10</span> &amp;&amp; t &lt;= <span class="number">26</span>) &#123;</span><br><span class="line">                <span class="comment">// s[i-2] 和 s[i-1] 共同解码成一个字母，只需要加dp[i-2]即可</span></span><br><span class="line">                dp[i] += dp[i - <span class="number">2</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="最长连续单调子序列-坐标型"><a href="#最长连续单调子序列-坐标型" class="headerlink" title="最长连续单调子序列(坐标型)"></a>最长连续单调子序列(坐标型)</h2><p>给定a[0], …. a[n-1] 找到最长的连续子序列i, i+1, i+2, …使得a[i] &lt; a[i+1]… &lt; a[j],或者<br>a[i] &gt; a[i+1] &gt; .. &gt;[j]，输出长度 j - i + 1 </p>
+<p>例子:</p>
+<blockquote>
+<p>输入: [5,1,2,3, 4]<br>输出: 4 (子序列1,2, 3, 4)</p>
+</blockquote>
+<h3 id="分析-7"><a href="#分析-7" class="headerlink" title="分析"></a>分析</h3><ul>
+<li>首先，对于a[i]&gt;a[+1&gt;]…&gt;a[j]，可以将整个a序列倒过来，就变成求最长连续_上升子序列了</li>
+<li>所以，只需要考虑找到最长的a[i]&lt;a[i+1]&lt;… &lt;a[j]</li>
+<li>可以从每个a[j开始，一直向后延伸找到最长的连续上升序列</li>
+<li>最差情况下，对于长度为N的序列，需要计算O(N2)步:0,1,2….,N-1 .</li>
+</ul>
+<hr>
+<ul>
+<li>最后一步：对于最优的策略，一定有最后一个元素a[j]</li>
+<li>第一种情况：最优策略中<strong>最长连续上升子序列</strong>就是{a[j]}，答案是1</li>
+<li>第二种情况：子序列长度大于1，那么最优策略中a[j]前一个元素肯定是a[j-1]，这种情况一定是a[j-1] &lt; a[j]</li>
+<li>因为是最优策略，那么它选中的以a[j-1]结尾的连续上升子序列一定是最长的</li>
+</ul>
+<p><strong>子问题</strong></p>
+<ul>
+<li>要求以aj-1]结尾的最长连续上升子序列</li>
+<li>本来是求以a[j]结尾的最长连续上升子序列</li>
+</ul>
+<p>状态:设dp[j] =以a[j]结尾的最长连续上升子序列的长度</p>
+<p><strong>转移方程</strong></p>
+<p>dp[j] = max{ 1，<br>dp[j-1]+1 | j&gt;0 and a[j-1] &lt; a[j]}</p>
+<p>以a[j]结尾的最长连续上升子序列的长度 = 情况1 :子序列就是a[j]本身 + 情况2 :以a[j-1]结 尾的最长连续上升子序列的长度，加上a[j]</p>
+<p><strong>初始条件</strong></p>
+<ol>
+<li>空</li>
+</ol>
+<p><strong>边界条件</strong></p>
+<ol>
+<li>情况2中 j &gt; 0 即 a[j]前至少还有一个元素</li>
+<li>a[j] &gt; a[j-1]，满足单调性</li>
+</ol>
+<p><strong>计算顺序</strong></p>
+<ul>
+<li>计算dp[0], dp[1], dp[2], … dp[n-1]</li>
+<li>因为我们不知道最优策略中最后一个元素是哪个a[j]，所以答案是<br>max{dp[0], dp[1], dp[2], … dp[n-1]}</li>
+<li>算法时间复杂度O(n)，空间复杂度O(n)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">longestIncreasingContinuousSubsequence</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = arr.length;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> r1 = LIS(arr, n);</span><br><span class="line">    <span class="comment">// reverse</span></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = n - <span class="number">1</span>, t;</span><br><span class="line">    <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">        t = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = t;</span><br><span class="line">        ++i;</span><br><span class="line">        ++j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> r2 = LIS(arr, n);</span><br><span class="line">    <span class="keyword">return</span> Math.max(r1, r2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">LIS</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="comment">//case 1</span></span><br><span class="line">        dp[i] = <span class="number">1</span>;</span><br><span class="line">        <span class="comment">//case 2</span></span><br><span class="line">        <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; arr[i] &gt; arr[i - <span class="number">1</span>]) &#123;</span><br><span class="line">            dp[i] = dp[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        res = Math.max(res, dp[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="最长单调子序列"><a href="#最长单调子序列" class="headerlink" title="最长单调子序列"></a>最长单调子序列</h2><p>给定一个无序的整数数组，找到其中最长上升子序列的长度。</p>
+<p>示例:</p>
+<blockquote>
+<p>输入: [10,9,2,5,3,7,101,18]<br>输出: 4   </p>
+<p>解释: 最长的上升子序列是 [2,3,7,101]，它的长度是 4。</p>
+</blockquote>
+<blockquote>
+<p>说明:<br>可能会有多种最长上升子序列的组合，你只需要输出对应的长度即可。<br>你算法的时间复杂度应该为 O(n2) 。<br>进阶: 你能将算法的时间复杂度降低到 O(n log n) 吗?  </p>
+</blockquote>
+<h3 id="分析-8"><a href="#分析-8" class="headerlink" title="分析"></a>分析</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> // 上升子序列(不连续也可) O(n^2)</span><br><span class="line">public int lengthOfLIS1(int[] nums) &#123;</span><br><span class="line">    int n = nums.length;</span><br><span class="line">    // 确定状态, dp[i] 为nums[i]结尾的 最长子序列长度</span><br><span class="line">    int[] dp = new int[n];</span><br><span class="line">    // 子问题。1. 只有一个元素。2. 有多个且 nums[n-1] &lt; nums[n]</span><br><span class="line">    // 转移方程 dp[i] = max&#123;dp[1],dp[2],...,dp[n]&#125;</span><br><span class="line">    int res = 0;</span><br><span class="line">    for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        // 初始条件</span><br><span class="line">        dp[i] = 1;</span><br><span class="line"></span><br><span class="line">        for (int j = 0; j &lt; i; j++) &#123;</span><br><span class="line">            if (nums[j] &lt; nums[i]) &#123;</span><br><span class="line">                dp[i] = Math.max(dp[i], dp[j] + 1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        res = Math.max(res, dp[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>动态规划+二分</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 上升子序列(不连续也可) O(n * ln(n))</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLIS2</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// tail[i] 表示长度为 i + 1 的所有上升子序列的结尾的最小值。</span></span><br><span class="line">    <span class="keyword">int</span>[] tails = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>, j = res;</span><br><span class="line">        <span class="comment">// 在tails中，通过 二分查找 确定num应该放在tails中的i位置 在哪里(追加/替换)</span></span><br><span class="line">        <span class="comment">// 情况①：如果大于则添加到最后，情况②：在tails中找到第一个大于num的，替换</span></span><br><span class="line">        <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">            <span class="keyword">int</span> m = (i + j) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (tails[m] &lt; num) &#123;</span><br><span class="line">                i = m + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                j = m;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        tails[i] = num;</span><br><span class="line">        <span class="comment">// 如果发生情况①，res=j，如果发生情况②，res!=j，会比j小</span></span><br><span class="line">        <span class="comment">// res为当前产生的最长的增序的长度</span></span><br><span class="line">        <span class="keyword">if</span> (res == j) res++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="最小路径和"><a href="#最小路径和" class="headerlink" title="最小路径和"></a>最小路径和</h2><p>给定m行n列的网格，每个格子(i,j) 里边都有一个非负数A[i][j]</p>
+<p>求一个从左上角(0,0) 到右下角的路径，每一步只能向下或者向右走一步，使得路径上的格子里的数字之和最小。</p>
+<p>输出最小数字和</p>
+<h3 id="分析-9"><a href="#分析-9" class="headerlink" title="分析"></a>分析</h3><p>最值型动态规划</p>
+<p>和Unique Path一样，无论用何种方式走到右下角，总有最后一步：向右，向下</p>
+<p>右下角坐标设为(m-1, n-1)</p>
+<p>前一步一定是在 (m-2, n-2)或者(m-1, n-2)</p>
+<p><strong>确定状态</strong></p>
+<p>最优策略的路径总和数字最小</p>
+<ul>
+<li>若倒数第二步在(m-2, n-1)，则前面一定是从(0, 0)到达(m-2, n-1)总和最小的路径</li>
+<li>若倒数第二步在(m-1, n-2)，则前面一定是从(0, 0)到达(m-1, n-2)总和最小的路径</li>
+</ul>
+<p><strong>子问题</strong></p>
+<ul>
+<li>要求从左上角走到(m-1， n-2)的路径的最小数字总和以及走到(m-2，n-1)的路径的最小数字总和</li>
+<li>原题要求有从左上角走到(m-1, n-1)的路径的最小数字的总和</li>
+</ul>
+<p><strong>转移方程</strong></p>
+<p>设 从(0, 0)走到(i, j)的路径最小数字总和dp[i][j]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dp[i][j] = min&#123;dp[i-1][j], dp[i][j-1]&#125; + A[i][j]</span><br><span class="line"></span><br><span class="line">从(0,0)走到格子(i,j)的最小路径数字总和 = min&#123; 从(0,0)走到格子(i-1,j)的最小路径数字总和, 从(0,0)走到格子(i, j-1)的最小路径数字总和&#125; + 格子(i,j)的数字</span><br></pre></td></tr></table></figure>
+
+<p><strong>初始条件和边界情况</strong></p>
+<ul>
+<li>初始条件：dp[0][0] = A[0][0]</li>
+<li>i=0 或 j=0，则前一步只能从一个方向过来</li>
+</ul>
+<p><strong>计算顺序</strong></p>
+<ul>
+<li>dp[0][0] = A[0][0]</li>
+<li>计算第0行：dp[0][0], dp[0][1], ……,dp[0][n-1] </li>
+<li>计算第1行：dp[1][0], dp[1][1], ……,dp[1][n-1] </li>
+<li>····</li>
+<li>计算第m-1行：dp[m-1][0], dp[m-1][1], ……,dp[m-1][n-1] </li>
+<li>dp[i][j] = dp[i-1][j] + dp[i][j-1]</li>
+<li>时间复杂度(计算步数)：O(MN)，空间复杂度(数组大小)：O(MN)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="keyword">int</span>[][] A)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m = A.length;</span><br><span class="line">    <span class="keyword">if</span>(m == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> n = A[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[m][n];</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++)&#123;</span><br><span class="line">            <span class="comment">// dp[i][j] = min&#123;dp[i-1][j], dp[i][j-1]&#125; + A[i][j]</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment">// dp[0][0] = A[0][0]</span></span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span> &amp;&amp; j == <span class="number">0</span>)&#123;</span><br><span class="line">                dp[i][j] = A[i][j];</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">int</span> t = Integer.MAX_VALUE;</span><br><span class="line">            <span class="keyword">if</span>( i &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                t = Math.min(t, dp[i-<span class="number">1</span>][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (j &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                t = Math.min(t, dp[i][j-<span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            dp[i][j] = t + A[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[m-<span class="number">1</span>][n-<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用滚动数组</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="keyword">int</span>[][] A)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m = A.length;</span><br><span class="line">    <span class="keyword">if</span>(m == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> n = A[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 1. 开两行数组</span></span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>][n];</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 2. 开两个指针</span></span><br><span class="line">    <span class="keyword">int</span> old, now = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++)&#123;</span><br><span class="line">        <span class="comment">// 3. 滚动 swap old and now</span></span><br><span class="line">        old = now;</span><br><span class="line">        now = <span class="number">1</span> - now;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++)&#123;</span><br><span class="line">            <span class="comment">// dp[i][j] = min&#123;dp[i-1][j], dp[i][j-1]&#125; + A[i][j]</span></span><br><span class="line">            <span class="comment">// dp[0][0] = A[0][0]</span></span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span> &amp;&amp; j == <span class="number">0</span>)&#123;</span><br><span class="line">                dp[now][j] = A[i][j];</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">int</span> t = Integer.MAX_VALUE;</span><br><span class="line">            <span class="keyword">if</span>( i &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                t = Math.min(t, dp[old][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (j &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                t = Math.min(t, dp[now][j-<span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            dp[now][j] = t + A[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[now][n-<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="xxxx"><a href="#xxxx" class="headerlink" title="xxxx"></a>xxxx</h2><h3 id="分析-10"><a href="#分析-10" class="headerlink" title="分析"></a>分析</h3>
+      
+    </div>
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/alg-dynamic-program/">动态规划算法题</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Big Jelly 的个人博客">Big Jelly</a></p>
+  <p><span>发布时间:</span>2020年03月13日 - 23:26</p>
+  <p><span>最后更新:</span>2020年08月28日 - 14:28</p>
+  <p><span>原始链接:</span><a href="/alg-dynamic-program/" title="动态规划算法题">https://jelly54.github.io/alg-dynamic-program/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://jelly54.github.io/alg-dynamic-program/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+    </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Big Jelly 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Big Jelly 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+          
+            <a href="/tags/动态规划/" rel="tag"><i class="fa fa-tag"></i> 动态规划</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/alg-frequenceCode/" rel="next" title="高频算法题-zs">
+                <i class="fa fa-chevron-left"></i> 高频算法题-zs
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/alg-BS-variant/" rel="prev" title="二分查找变形">
+                二分查找变形 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="gitalk-container"></div>
+
+  
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 展示广告 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3331353808689126" data-ad-slot="4663393885" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Big Jelly">
+            
+              <p class="site-author-name" itemprop="name">Big Jelly</p>
+              <p class="site-description motion-element" itemprop="description">Nothing is easier than to deceive oneself</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a rel="external nofollow" href="https://github.com/jelly54" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a rel="external nofollow" href="mailto:jelly_54@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                外链小站
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://leetcode.com/" title="LeetCode" rel="external nofollow" target="_blank">LeetCode</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.dooccn.com/" title="在线编辑代码" rel="external nofollow" target="_blank">在线编辑代码</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.chuangzaoshi.com/code" title="创造狮导航" rel="external nofollow" target="_blank">创造狮导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://24mail.chacuo.net/?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=qq" title="24Mail" rel="external nofollow" target="_blank">24Mail</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://e.xitu.io/" title="掘金酱" rel="external nofollow" target="_blank">掘金酱</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目特点"><span class="nav-number">1.</span> <span class="nav-text">题目特点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计数"><span class="nav-number">1.1.</span> <span class="nav-text">计数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求最大值最小值"><span class="nav-number">1.2.</span> <span class="nav-text">求最大值最小值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求存在性"><span class="nav-number">1.3.</span> <span class="nav-text">求存在性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#归类"><span class="nav-number">2.</span> <span class="nav-text">归类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#序列型动态规划"><span class="nav-number">2.1.</span> <span class="nav-text">序列型动态规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#坐标型动态规划"><span class="nav-number">2.2.</span> <span class="nav-text">坐标型动态规划</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">3.</span> <span class="nav-text">解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#确定状态"><span class="nav-number">3.1.</span> <span class="nav-text">确定状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转移方程"><span class="nav-number">3.2.</span> <span class="nav-text">转移方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始条件和边界条件"><span class="nav-number">3.3.</span> <span class="nav-text">初始条件和边界条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调整计算顺序"><span class="nav-number">3.4.</span> <span class="nav-text">调整计算顺序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例题讲解"><span class="nav-number">4.</span> <span class="nav-text">例题讲解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#零钱兑换-最值型"><span class="nav-number">4.1.</span> <span class="nav-text">零钱兑换(最值型)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">4.1.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同路径-计数型"><span class="nav-number">4.2.</span> <span class="nav-text">不同路径(计数型)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跳跃游戏-存在型"><span class="nav-number">4.3.</span> <span class="nav-text">跳跃游戏(存在型)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-2"><span class="nav-number">4.3.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大相乘子序列-最值型"><span class="nav-number">4.4.</span> <span class="nav-text">最大相乘子序列(最值型)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-3"><span class="nav-number">4.4.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同路径Ⅱ-坐标型"><span class="nav-number">4.5.</span> <span class="nav-text">不同路径Ⅱ (坐标型)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-4"><span class="nav-number">4.5.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#粉刷房子-序列型"><span class="nav-number">4.6.</span> <span class="nav-text">粉刷房子(序列型)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-5"><span class="nav-number">4.6.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解码方法-划分型"><span class="nav-number">4.7.</span> <span class="nav-text">解码方法(划分型)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-6"><span class="nav-number">4.7.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长连续单调子序列-坐标型"><span class="nav-number">4.8.</span> <span class="nav-text">最长连续单调子序列(坐标型)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-7"><span class="nav-number">4.8.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长单调子序列"><span class="nav-number">4.9.</span> <span class="nav-text">最长单调子序列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-8"><span class="nav-number">4.9.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最小路径和"><span class="nav-number">4.10.</span> <span class="nav-text">最小路径和</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-9"><span class="nav-number">4.10.1.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#xxxx"><span class="nav-number">4.11.</span> <span class="nav-text">xxxx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-10"><span class="nav-number">4.11.1.</span> <span class="nav-text">分析</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 侧边栏广告 -->
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3331353808689126" data-ad-slot="7563237003" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>
+      	(adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> &copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Big Jelly</span>
+
+</div>
+
+<div class="powered-by">
+	
+		<span class="post-meta-item-icon">
+			<i class="fa fa-area-chart"></i>
+		</span>
+		
+			<span class="post-meta-item-text">Site words total count&#58;</span>
+		
+		<span title="Site words total count">176.1k</span>
+	
+  
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+		<span class="post-meta-divider">|</span>
+		<span class="post-visit-item-icon">
+			<i class="fa fa-user-md"></i>
+		</span>
+		<span class="busuanzi_container_site_uv">
+			Visitors to this site: <span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+  
+
+
+	
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="/js/md5.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'ca31692554c3aea431f0',
+          clientSecret: '1173c9e9c3c9038304c9a5b08929a359cae9f847',
+          repo: 'jelly54.github.io',
+          owner: 'jelly54',
+          admin: ['jelly54'],
+          id: md5(location.pathname),
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')
+       </script>
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<script type="text/javascript" color="0,0,255" opacity="0.7" zindex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":true,"model":{"scale":1,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":0,"vOffset":-5},"mobile":{"show":true,"scale":0.5},"react":{"opacity":0.9},"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

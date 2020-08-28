@@ -2,6 +2,167 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jelly54.github.io/netty-start/</loc>
+    
+    <lastmod>2020-08-28T07:04:59.442Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/design-pattern-observa/</loc>
+    
+    <lastmod>2020-08-28T06:59:48.057Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/design-pattern-proxy/</loc>
+    
+    <lastmod>2020-08-28T06:59:15.303Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/design-pattern-singleton/</loc>
+    
+    <lastmod>2020-08-28T06:55:33.027Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/design-pattern-factory/</loc>
+    
+    <lastmod>2020-08-28T06:53:35.767Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/design-pattern-overview/</loc>
+    
+    <lastmod>2020-08-28T06:52:03.625Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/java-design-principle/</loc>
+    
+    <lastmod>2020-08-28T06:49:52.625Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/redis-learn/</loc>
+    
+    <lastmod>2020-08-28T06:47:17.925Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/java-finalxxx/</loc>
+    
+    <lastmod>2020-08-28T06:46:23.864Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/java-static/</loc>
+    
+    <lastmod>2020-08-28T06:45:50.668Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/java-equal-hashcode/</loc>
+    
+    <lastmod>2020-08-28T06:45:11.089Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/java-interface2class/</loc>
+    
+    <lastmod>2020-08-28T06:44:45.854Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/java-dynamic-proxy/</loc>
+    
+    <lastmod>2020-08-28T06:43:59.525Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/alg-lru-coding/</loc>
+    
+    <lastmod>2020-08-28T06:41:31.758Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/alg-BS-variant/</loc>
+    
+    <lastmod>2020-08-28T06:34:07.409Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/alg-frequenceCode/</loc>
+    
+    <lastmod>2020-08-28T06:29:24.747Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/alg-dynamic-program/</loc>
+    
+    <lastmod>2020-08-28T06:28:53.792Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/alg-consistent-hash/</loc>
+    
+    <lastmod>2020-08-28T06:22:45.890Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/storage-NFS/</loc>
+    
+    <lastmod>2020-08-28T06:12:35.890Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/storage-distributed/</loc>
+    
+    <lastmod>2020-08-28T06:12:32.095Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/ceph-problems/</loc>
+    
+    <lastmod>2020-08-28T06:12:21.439Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/ceph-principle/</loc>
+    
+    <lastmod>2020-08-28T06:12:16.582Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jelly54.github.io/ceph-cros/</loc>
+    
+    <lastmod>2020-08-28T06:12:11.410Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jelly54.github.io/springb-start2advanced/</loc>
     
     <lastmod>2020-08-28T06:01:32.073Z</lastmod>
@@ -44,13 +205,6 @@
   </url>
   
   <url>
-    <loc>https://jelly54.github.io/java-finalxxx/</loc>
-    
-    <lastmod>2020-08-28T02:49:08.289Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jelly54.github.io/mysql-b-tree/</loc>
     
     <lastmod>2020-08-28T02:47:58.675Z</lastmod>
@@ -58,30 +212,9 @@
   </url>
   
   <url>
-    <loc>https://jelly54.github.io/storage-NFS/</loc>
-    
-    <lastmod>2020-08-28T02:46:00.930Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jelly54.github.io/redis-learn/</loc>
-    
-    <lastmod>2020-08-28T02:45:07.135Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jelly54.github.io/mysql-show-profile/</loc>
     
     <lastmod>2020-08-28T02:43:07.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jelly54.github.io/java-static/</loc>
-    
-    <lastmod>2020-08-28T02:41:10.654Z</lastmod>
     
   </url>
   
@@ -96,13 +229,6 @@
     <loc>https://jelly54.github.io/java-reflect/</loc>
     
     <lastmod>2020-08-28T02:41:00.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jelly54.github.io/java-interface2class/</loc>
-    
-    <lastmod>2020-08-28T02:40:48.070Z</lastmod>
     
   </url>
   
@@ -145,13 +271,6 @@
     <loc>https://jelly54.github.io/tags/index.html</loc>
     
     <lastmod>2020-08-27T11:05:52.296Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jelly54.github.io/storage-distributed/</loc>
-    
-    <lastmod>2020-08-27T11:05:52.295Z</lastmod>
     
   </url>
   
@@ -345,21 +464,7 @@
   </url>
   
   <url>
-    <loc>https://jelly54.github.io/java-equal-hashcode/</loc>
-    
-    <lastmod>2020-08-27T11:05:52.286Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jelly54.github.io/hello-stranger/</loc>
-    
-    <lastmod>2020-08-27T11:05:52.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jelly54.github.io/java-dynamic-proxy/</loc>
     
     <lastmod>2020-08-27T11:05:52.285Z</lastmod>
     
@@ -369,34 +474,6 @@
     <loc>https://jelly54.github.io/java-auto-box/</loc>
     
     <lastmod>2020-08-27T11:05:52.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jelly54.github.io/java-design-parten/</loc>
-    
-    <lastmod>2020-08-27T11:05:52.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jelly54.github.io/ceph-principle/</loc>
-    
-    <lastmod>2020-08-27T11:05:52.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jelly54.github.io/ceph-problems/</loc>
-    
-    <lastmod>2020-08-27T11:05:52.285Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jelly54.github.io/ceph-cros/</loc>
-    
-    <lastmod>2020-08-27T11:05:52.284Z</lastmod>
     
   </url>
   
@@ -411,13 +488,6 @@
     <loc>https://jelly54.github.io/alg-timeComplex/</loc>
     
     <lastmod>2020-08-27T11:05:52.284Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jelly54.github.io/alg-frequenceCode/</loc>
-    
-    <lastmod>2020-08-27T11:05:52.283Z</lastmod>
     
   </url>
   
